@@ -1,0 +1,35 @@
+<h1>Contact us</h1>
+
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+  <h5 *ngIf="success">Your form is valid</h5>
+
+  <mat-form-field>
+    <input matInput placeholder="Name" formControlName="name" />
+    <div *ngIf="submitted && messageForm.controls.name.errors">
+      <mat-error *ngIf="messageForm.controls.name.errors.required">
+        Your Name is Required
+      </mat-error>
+    </div>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Message" formControlName="message"></textarea>
+    <div *ngIf="submitted && messageForm.controls.message.errors">
+      <mat-error *ngIf="messageForm.controls.message.errors.required">
+        A message is required
+      </mat-error>
+    </div>
+  </mat-form-field>
+
+  <!-- <button mat-button type="submit" value="Send Message" class="cta"></button> -->
+  <button mat-flat-button type="submit" color="primary" class="cta">Send Message</button>
+
+</form>
+
+<div *ngIf="submitted && success" class="results">
+  <strong>Name: </strong>
+  <span>{{ messageForm.controls.name.value }}</span>
+  
+  <strong>Message: </strong>
+  <span>{{ messageForm.controls.message.value }}</span>
+</div>  
