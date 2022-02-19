@@ -21,15 +21,14 @@
     </div>
   </mat-form-field>
 
-  <!-- <button mat-button type="submit" value="Send Message" class="cta"></button> -->
   <button mat-flat-button type="submit" color="primary" class="cta">Send Message</button>
 
 </form>
 
 <div *ngIf="submitted && success" class="results">
-  <strong>Name: </strong>
-  <span>{{ messageForm.controls.name.value }}</span>
-  
-  <strong>Message: </strong>
-  <span>{{ messageForm.controls.message.value }}</span>
+  <strong>
+    Thank you {{ messageForm.controls.name.value }}! 
+    <br>
+    We will get back to you as soon as possible.
+  </strong>
 </div>  

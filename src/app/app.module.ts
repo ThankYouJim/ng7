@@ -14,47 +14,36 @@ import { HomeComponent } from './home/home.component';
 import {
   MatButtonModule,
   MatButtonToggleModule,
-  // MatIconModule,
+  MatIconModule,
   // MatProgressSpinnerModule,
   MatToolbarModule,
   MatSliderModule,
   MatCardModule,
   MatInputModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatDividerModule,
+  MatListModule,
 } from '@angular/material';
 
 const material = [
   MatButtonModule,
   MatButtonToggleModule,
-  // MatIconModule,
+  MatIconModule,
   // MatProgressSpinnerModule,
   MatToolbarModule,
   MatSliderModule,
   MatCardModule,
   MatInputModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatDividerModule,
+  MatListModule,
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavComponent,
-    AboutComponent,
-    ContactComponent,
-    HomeComponent
-  ],
-  imports: [
-    AppRoutingModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    material
-  ],
-  exports: [
-    material
-  ],
+  declarations: [ AppComponent, NavComponent, AboutComponent, ContactComponent, HomeComponent ],
+  imports: [ AppRoutingModule, BrowserModule, BrowserAnimationsModule, HttpClientModule, ReactiveFormsModule, material ],
+  exports: [ material ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ],
 })
-export class AppModule { }
+export class AppModule {}

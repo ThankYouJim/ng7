@@ -1,13 +1,3 @@
-/* .bigGray {
-  font-size: 3rem;
-  color: gray;
-}
-
-.smallPink {
-  font-size: 1rem;
-  color: pink;
-} */
-
 ul {
   float: none;
 }
@@ -15,4 +5,8 @@ ul {
 li {
   display: inline;
   margin: 1rem;
+}
+
+.header-image {
+  margin-right: 1rem;
 }
