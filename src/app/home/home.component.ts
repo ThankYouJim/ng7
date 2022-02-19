@@ -4,19 +4,17 @@ import { DataService } from '../data.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: [ './home.component.css' ],
 })
 export class HomeComponent implements OnInit {
-
-  // styleFlag: boolean = false;
   users: Object;
 
-  constructor(private data: DataService) { }
+  constructor(private data: DataService) {}
 
   ngOnInit() {
-    this.data.getUsers().subscribe(data=> {
+    this.data.getUsers().subscribe(data => {
       this.users = data;
-      // console.log(this.users);
+      console.log(this.users);
     });
   }
 }

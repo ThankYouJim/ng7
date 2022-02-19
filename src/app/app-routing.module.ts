@@ -8,13 +8,14 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+  // { path: 'contact/:id', component: ContactComponent },
 
-  { path: '**', redirectTo: ''}
-]
+  { path: '**', redirectTo: '' },
+];
 
 @NgModule({
   declarations: [],
-  imports: [RouterModule.forRoot(routes, { enableTracing: true})],
-  exports: [RouterModule]
+  imports: [ RouterModule.forRoot(routes, { enableTracing: true }) ],
+  exports: [ RouterModule ],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
